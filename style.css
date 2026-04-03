@@ -39,13 +39,34 @@ transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
 
 
 
-body{
-background:linear-gradient(135deg, #0f172a, #1e293b);
-color:white;
-min-height:100vh;
+ body {
+    margin: 0;
+    background: #000;
+  
+    display: flex;
+   
+    color: #fff;
+    font-family: sans-serif;
+    min-height:100vh;
 display:flex;
 flex-direction:column;
-}
+  }
+
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+  }
 
 /* CONTAINER */
 .container{
